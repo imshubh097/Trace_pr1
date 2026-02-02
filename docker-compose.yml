@@ -23,27 +23,19 @@ services:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
 
   tracking-app:
-<<<<<<< HEAD
     build: ./tracking-app
-=======
-    build: .
     container_name: tracking-app
     depends_on: [mysql, kafka]
->>>>>>> 9a842f358eab392ffe54aafe4e39fae449fefa2a
     ports:
       - "8080:8080"
     environment:
       SPRING_PROFILES_ACTIVE: docker
-<<<<<<< HEAD
-    depends_on: [mysql, kafka]
 
-  order-service:
-    build: ./order-service
+  order-app:
+    build: ./order-app
+    container_name: order-app
+    depends_on: [mysql, kafka]
     ports:
       - "8081:8081"
     environment:
       SPRING_PROFILES_ACTIVE: docker
-    depends_on: [mysql, kafka]
-=======
-
->>>>>>> 9a842f358eab392ffe54aafe4e39fae449fefa2a
