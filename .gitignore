@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 **/target/
 **/.idea/
 **/*.log
 .env
+=======
+/target/
+.idea/
+*.iml
+>>>>>>> 9a842f358eab392ffe54aafe4e39fae449fefa2a
